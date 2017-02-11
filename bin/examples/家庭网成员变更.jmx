@@ -1,0 +1,1852 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="2.2">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="测试计划" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="线程组" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <longProp name="ThreadGroup.start_time">1438325304000</longProp>
+        <longProp name="ThreadGroup.end_time">1438325304000</longProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+          <collectionProp name="Arguments.arguments">
+            <elementProp name="FamilyNetType" elementType="Argument">
+              <stringProp name="Argument.name">FamilyNetType</stringProp>
+              <stringProp name="Argument.value">4</stringProp>
+              <stringProp name="Argument.desc">亲情网4(OFFER_PLAN_GROUP_QQW),家庭网1(OFFER_PLAN_FAMILY),友情网5(OFFER_PLAN_GROUP_PYW)</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="OfferType" elementType="Argument">
+              <stringProp name="Argument.name">OfferType</stringProp>
+              <stringProp name="Argument.value">OFFER_PLAN_GROUP_QQW</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+              <stringProp name="Argument.desc">亲情网4(OFFER_PLAN_GROUP_QQW),家庭网1(OFFER_PLAN_FAMILY),友情网5(OFFER_PLAN_GROUP_PYW)</stringProp>
+            </elementProp>
+            <elementProp name="PayIndex" elementType="Argument">
+              <stringProp name="Argument.name">PayIndex</stringProp>
+              <stringProp name="Argument.value">181000000021</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+              <stringProp name="Argument.desc">设置代付索引</stringProp>
+            </elementProp>
+            <elementProp name="Group_Role" elementType="Argument">
+              <stringProp name="Argument.name">Group_Role</stringProp>
+              <stringProp name="Argument.value">281000000205</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+              <stringProp name="Argument.desc">产品角色配置亲友网主号角色：281000000205</stringProp>
+            </elementProp>
+            <elementProp name="MainUser" elementType="Argument">
+              <stringProp name="Argument.name">MainUser</stringProp>
+              <stringProp name="Argument.value">000</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+              <stringProp name="Argument.desc">初始值，用于判断</stringProp>
+            </elementProp>
+            <elementProp name="MainOfferId" elementType="Argument">
+              <stringProp name="Argument.name">MainOfferId</stringProp>
+              <stringProp name="Argument.value">216000000086</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+              <stringProp name="Argument.desc">主号基本套餐编号：select t.product_item_id, name,m.offer_type   from product.up_product_item t,product.up_offer m   where t.product_item_id=m.offer_id and m.offer_type in  (OFFER_PLAN_GROUP_QQW,;OFFER_PLAN_FAMILY,OFFER_PLAN_GROUP_PYW);</stringProp>
+            </elementProp>
+            <elementProp name="AddNum" elementType="Argument">
+              <stringProp name="Argument.name">AddNum</stringProp>
+              <stringProp name="Argument.value">2</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+              <stringProp name="Argument.desc">群组成员添加个数</stringProp>
+            </elementProp>
+            <elementProp name="Ip" elementType="Argument">
+              <stringProp name="Argument.name">Ip</stringProp>
+              <stringProp name="Argument.value">10.3.3.191</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+              <stringProp name="Argument.desc">主机IP186 187</stringProp>
+            </elementProp>
+            <elementProp name="Port" elementType="Argument">
+              <stringProp name="Argument.name">Port</stringProp>
+              <stringProp name="Argument.value">50001</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+              <stringProp name="Argument.desc">端口</stringProp>
+            </elementProp>
+            <elementProp name="Boolean" elementType="Argument">
+              <stringProp name="Argument.name">Boolean</stringProp>
+              <stringProp name="Argument.value">True</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+              <stringProp name="Argument.desc">初始值，用于判断</stringProp>
+            </elementProp>
+            <elementProp name="RoleId" elementType="Argument">
+              <stringProp name="Argument.name">RoleId</stringProp>
+              <stringProp name="Argument.value">0</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+              <stringProp name="Argument.desc">1：家长/主号 0：成员/副号</stringProp>
+            </elementProp>
+            <elementProp name="prod_catalog_id" elementType="Argument">
+              <stringProp name="Argument.name">prod_catalog_id</stringProp>
+              <stringProp name="Argument.value">271000000002</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+              <stringProp name="Argument.desc">虚用户规格</stringProp>
+            </elementProp>
+          </collectionProp>
+        </Arguments>
+        <hashTree/>
+        <JDBCDataSource guiclass="TestBeanGUI" testclass="JDBCDataSource" testname="JDBC Connection Configuration" enabled="true">
+          <stringProp name="dataSource">oracleconn</stringProp>
+          <stringProp name="poolMax">10</stringProp>
+          <stringProp name="timeout">10000</stringProp>
+          <stringProp name="trimInterval">60000</stringProp>
+          <boolProp name="autocommit">true</boolProp>
+          <stringProp name="transactionIsolation">TRANSACTION_REPEATABLE_READ</stringProp>
+          <boolProp name="keepAlive">true</boolProp>
+          <stringProp name="connectionAge">5000</stringProp>
+          <stringProp name="checkQuery">Select 1</stringProp>
+          <stringProp name="dbUrl">jdbc:oracle:thin:@10.3.3.193:1521:gxcrmdev</stringProp>
+          <stringProp name="driver">oracle.jdbc.driver.OracleDriver</stringProp>
+          <stringProp name="username">aiqry</stringProp>
+          <stringProp name="password">aiqry</stringProp>
+        </JDBCDataSource>
+        <hashTree/>
+        <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP信息头管理器" enabled="true">
+          <collectionProp name="HeaderManager.headers">
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Content-Type</stringProp>
+              <stringProp name="Header.value">application/x-www-form-urlencoded;charset=UTF-8</stringProp>
+            </elementProp>
+          </collectionProp>
+        </HeaderManager>
+        <hashTree/>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="流程测试" enabled="false"/>
+        <hashTree>
+          <WhileController guiclass="WhileControllerGui" testclass="WhileController" testname="循环处理直到业务受理成功" enabled="true">
+            <stringProp name="WhileController.condition">${Boolean}</stringProp>
+          </WhileController>
+          <hashTree>
+            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="步骤一(确定受理主号码)" enabled="true"/>
+            <hashTree>
+              <WhileController guiclass="WhileControllerGui" testclass="WhileController" testname="While查询并校验主号码，直到通过" enabled="true">
+                <stringProp name="WhileController.condition">${Boolean}</stringProp>
+              </WhileController>
+              <hashTree>
+                <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="查询主号码(oracle)" enabled="true">
+                  <stringProp name="dataSource">oracleconn</stringProp>
+                  <stringProp name="queryType">Select Statement</stringProp>
+                  <stringProp name="query">  select bill_id from (
+ select t.bill_id from so1.ins_user_853 t,
+ (select t.cust_id from so1.ins_user_853 t,so1.ins_offer_853 m where  t.user_id=m.user_id and m.offer_id=&apos;${MainOfferId}&apos;
+  and t.cust_type=&apos;1&apos; and    bill_id like &apos;8%&apos; and prod_catalog_id=&apos;${prod_catalog_id}&apos;) m
+   where   t.state=&apos;1&apos; and  t.bill_id like &apos;1%&apos; and t.cust_id=m.cust_id order by dbms_random.value())
+   where rownum&lt;2 </stringProp>
+                  <stringProp name="queryArguments"></stringProp>
+                  <stringProp name="queryArgumentsTypes"></stringProp>
+                  <stringProp name="variableNames"></stringProp>
+                  <stringProp name="resultVariable"></stringProp>
+                </JDBCSampler>
+                <hashTree>
+                  <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="提取查询出的号码" enabled="true">
+                    <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+                    <stringProp name="RegexExtractor.refname">MainUser</stringProp>
+                    <stringProp name="RegexExtractor.regex">\d+</stringProp>
+                    <stringProp name="RegexExtractor.template">$0$</stringProp>
+                    <stringProp name="RegexExtractor.default">119</stringProp>
+                    <stringProp name="RegexExtractor.match_number">0</stringProp>
+                  </RegexExtractor>
+                  <hashTree/>
+                  <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="察看结果树" enabled="true">
+                    <boolProp name="ResultCollector.error_logging">false</boolProp>
+                    <objProp>
+                      <name>saveConfig</name>
+                      <value class="SampleSaveConfiguration">
+                        <time>true</time>
+                        <latency>true</latency>
+                        <timestamp>true</timestamp>
+                        <success>true</success>
+                        <label>true</label>
+                        <code>true</code>
+                        <message>true</message>
+                        <threadName>true</threadName>
+                        <dataType>true</dataType>
+                        <encoding>false</encoding>
+                        <assertions>true</assertions>
+                        <subresults>true</subresults>
+                        <responseData>false</responseData>
+                        <samplerData>false</samplerData>
+                        <xml>true</xml>
+                        <fieldNames>false</fieldNames>
+                        <responseHeaders>false</responseHeaders>
+                        <requestHeaders>false</requestHeaders>
+                        <responseDataOnError>false</responseDataOnError>
+                        <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+                        <assertionsResultsToSave>0</assertionsResultsToSave>
+                        <bytes>true</bytes>
+                      </value>
+                    </objProp>
+                    <stringProp name="filename"></stringProp>
+                  </ResultCollector>
+                  <hashTree/>
+                </hashTree>
+                <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="校验主号码(OI_CheckQuery4ModFamilyNetMember)" enabled="true">
+                  <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+                  <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                    <collectionProp name="Arguments.arguments">
+                      <elementProp name="" elementType="HTTPArgument">
+                        <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                        <stringProp name="Argument.value">{&#xd;
+	&quot;PubInfo&quot;:{&#xd;
+        &quot;ClerkId&quot; : &quot;&quot;,&#xd;
+        &quot;ClientIP&quot; : &quot;127.0.0.1&quot;,&#xd;
+        &quot;CountyCode&quot; : &quot;5300&quot;,&#xd;
+        &quot;InterfaceId&quot; : &quot;6000&quot;,&#xd;
+        &quot;InterfaceType&quot; : &quot;49&quot;,&#xd;
+        &quot;OpId&quot; : &quot;95550018&quot;,&#xd;
+        &quot;OrgId&quot; : &quot;0&quot;,&#xd;
+        &quot;RegionCode&quot; : &quot;853&quot;,&#xd;
+        &quot;TransactionId&quot; : &quot;20121210000018&quot;,&#xd;
+        &quot;TransactionTime&quot; : &quot;20121210140824&quot;&#xd;
+	},&#xd;
+	&quot;Request&quot;:{&#xd;
+		&quot;BusiCode&quot;:&quot;OI_CheckQuery4ModFamilyNetMember&quot;,&#xd;
+		&quot;BusiParams&quot;:{&#xd;
+			&quot;BillId&quot;:&quot;${MainUser}&quot;,&#xd;
+			&quot;FamilyNetType&quot;:&quot;${FamilyNetType}&quot;&#xd;
+		}&#xd;
+	}&#xd;
+}&#xd;
+</stringProp>
+                        <stringProp name="Argument.metadata">=</stringProp>
+                      </elementProp>
+                    </collectionProp>
+                  </elementProp>
+                  <stringProp name="HTTPSampler.domain">${Ip}</stringProp>
+                  <stringProp name="HTTPSampler.port">${Port}</stringProp>
+                  <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                  <stringProp name="HTTPSampler.response_timeout"></stringProp>
+                  <stringProp name="HTTPSampler.protocol"></stringProp>
+                  <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+                  <stringProp name="HTTPSampler.path">/CRMService</stringProp>
+                  <stringProp name="HTTPSampler.method">POST</stringProp>
+                  <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                  <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                  <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                  <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                  <stringProp name="HTTPSampler.implementation">Java</stringProp>
+                  <boolProp name="HTTPSampler.monitor">false</boolProp>
+                  <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+                </HTTPSamplerProxy>
+                <hashTree>
+                  <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="察看结果树" enabled="true">
+                    <boolProp name="ResultCollector.error_logging">false</boolProp>
+                    <objProp>
+                      <name>saveConfig</name>
+                      <value class="SampleSaveConfiguration">
+                        <time>true</time>
+                        <latency>true</latency>
+                        <timestamp>true</timestamp>
+                        <success>true</success>
+                        <label>true</label>
+                        <code>true</code>
+                        <message>true</message>
+                        <threadName>true</threadName>
+                        <dataType>true</dataType>
+                        <encoding>false</encoding>
+                        <assertions>true</assertions>
+                        <subresults>true</subresults>
+                        <responseData>false</responseData>
+                        <samplerData>false</samplerData>
+                        <xml>true</xml>
+                        <fieldNames>false</fieldNames>
+                        <responseHeaders>false</responseHeaders>
+                        <requestHeaders>false</requestHeaders>
+                        <responseDataOnError>false</responseDataOnError>
+                        <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+                        <assertionsResultsToSave>0</assertionsResultsToSave>
+                        <bytes>true</bytes>
+                      </value>
+                    </objProp>
+                    <stringProp name="filename"></stringProp>
+                  </ResultCollector>
+                  <hashTree/>
+                  <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="提取校验结果" enabled="true">
+                    <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+                    <stringProp name="RegexExtractor.refname">result</stringProp>
+                    <stringProp name="RegexExtractor.regex">&quot;CheckResult&quot;:(.)</stringProp>
+                    <stringProp name="RegexExtractor.template">$1$</stringProp>
+                    <stringProp name="RegexExtractor.default">119</stringProp>
+                    <stringProp name="RegexExtractor.match_number">0</stringProp>
+                  </RegexExtractor>
+                  <hashTree/>
+                </hashTree>
+                <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="Debug Sampler" enabled="true">
+                  <boolProp name="displayJMeterProperties">true</boolProp>
+                  <boolProp name="displayJMeterVariables">true</boolProp>
+                  <boolProp name="displaySystemProperties">true</boolProp>
+                </DebugSampler>
+                <hashTree>
+                  <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="察看结果树" enabled="true">
+                    <boolProp name="ResultCollector.error_logging">false</boolProp>
+                    <objProp>
+                      <name>saveConfig</name>
+                      <value class="SampleSaveConfiguration">
+                        <time>true</time>
+                        <latency>true</latency>
+                        <timestamp>true</timestamp>
+                        <success>true</success>
+                        <label>true</label>
+                        <code>true</code>
+                        <message>true</message>
+                        <threadName>true</threadName>
+                        <dataType>true</dataType>
+                        <encoding>false</encoding>
+                        <assertions>true</assertions>
+                        <subresults>true</subresults>
+                        <responseData>false</responseData>
+                        <samplerData>false</samplerData>
+                        <xml>true</xml>
+                        <fieldNames>false</fieldNames>
+                        <responseHeaders>false</responseHeaders>
+                        <requestHeaders>false</requestHeaders>
+                        <responseDataOnError>false</responseDataOnError>
+                        <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+                        <assertionsResultsToSave>0</assertionsResultsToSave>
+                        <bytes>true</bytes>
+                      </value>
+                    </objProp>
+                    <stringProp name="filename"></stringProp>
+                  </ResultCollector>
+                  <hashTree/>
+                </hashTree>
+                <IfController guiclass="IfControllerPanel" testclass="IfController" testname="if(校验通过，设置boolean=False)" enabled="true">
+                  <stringProp name="IfController.condition">&quot;${result}&quot;==&quot;1&quot;</stringProp>
+                  <boolProp name="IfController.evaluateAll">false</boolProp>
+                </IfController>
+                <hashTree>
+                  <UserParameters guiclass="UserParametersGui" testclass="UserParameters" testname="设置boolean=False" enabled="true">
+                    <collectionProp name="UserParameters.names">
+                      <stringProp name="1729365000">Boolean</stringProp>
+                    </collectionProp>
+                    <collectionProp name="UserParameters.thread_values">
+                      <collectionProp name="74520001">
+                        <stringProp name="67643651">False</stringProp>
+                      </collectionProp>
+                    </collectionProp>
+                    <boolProp name="UserParameters.per_iteration">false</boolProp>
+                  </UserParameters>
+                  <hashTree/>
+                  <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="Debug Sampler" enabled="true">
+                    <boolProp name="displayJMeterProperties">true</boolProp>
+                    <boolProp name="displayJMeterVariables">true</boolProp>
+                    <boolProp name="displaySystemProperties">true</boolProp>
+                  </DebugSampler>
+                  <hashTree>
+                    <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="察看结果树" enabled="true">
+                      <boolProp name="ResultCollector.error_logging">false</boolProp>
+                      <objProp>
+                        <name>saveConfig</name>
+                        <value class="SampleSaveConfiguration">
+                          <time>true</time>
+                          <latency>true</latency>
+                          <timestamp>true</timestamp>
+                          <success>true</success>
+                          <label>true</label>
+                          <code>true</code>
+                          <message>true</message>
+                          <threadName>true</threadName>
+                          <dataType>true</dataType>
+                          <encoding>false</encoding>
+                          <assertions>true</assertions>
+                          <subresults>true</subresults>
+                          <responseData>false</responseData>
+                          <samplerData>false</samplerData>
+                          <xml>true</xml>
+                          <fieldNames>false</fieldNames>
+                          <responseHeaders>false</responseHeaders>
+                          <requestHeaders>false</requestHeaders>
+                          <responseDataOnError>false</responseDataOnError>
+                          <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+                          <assertionsResultsToSave>0</assertionsResultsToSave>
+                          <bytes>true</bytes>
+                        </value>
+                      </objProp>
+                      <stringProp name="filename"></stringProp>
+                    </ResultCollector>
+                    <hashTree/>
+                  </hashTree>
+                </hashTree>
+              </hashTree>
+            </hashTree>
+            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="步骤二(确定成员号码)" enabled="true"/>
+            <hashTree>
+              <UserParameters guiclass="UserParametersGui" testclass="UserParameters" testname="重置Boolean" enabled="true">
+                <collectionProp name="UserParameters.names">
+                  <stringProp name="1729365000">Boolean</stringProp>
+                </collectionProp>
+                <collectionProp name="UserParameters.thread_values">
+                  <collectionProp name="13222069">
+                    <stringProp name="2615726">True</stringProp>
+                  </collectionProp>
+                </collectionProp>
+                <boolProp name="UserParameters.per_iteration">false</boolProp>
+              </UserParameters>
+              <hashTree/>
+              <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="Debug Sampler" enabled="true">
+                <boolProp name="displayJMeterProperties">true</boolProp>
+                <boolProp name="displayJMeterVariables">true</boolProp>
+                <boolProp name="displaySystemProperties">true</boolProp>
+              </DebugSampler>
+              <hashTree>
+                <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="察看结果树" enabled="true">
+                  <boolProp name="ResultCollector.error_logging">false</boolProp>
+                  <objProp>
+                    <name>saveConfig</name>
+                    <value class="SampleSaveConfiguration">
+                      <time>true</time>
+                      <latency>true</latency>
+                      <timestamp>true</timestamp>
+                      <success>true</success>
+                      <label>true</label>
+                      <code>true</code>
+                      <message>true</message>
+                      <threadName>true</threadName>
+                      <dataType>true</dataType>
+                      <encoding>false</encoding>
+                      <assertions>true</assertions>
+                      <subresults>true</subresults>
+                      <responseData>false</responseData>
+                      <samplerData>false</samplerData>
+                      <xml>true</xml>
+                      <fieldNames>false</fieldNames>
+                      <responseHeaders>false</responseHeaders>
+                      <requestHeaders>false</requestHeaders>
+                      <responseDataOnError>false</responseDataOnError>
+                      <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+                      <assertionsResultsToSave>0</assertionsResultsToSave>
+                      <bytes>true</bytes>
+                    </value>
+                  </objProp>
+                  <stringProp name="filename"></stringProp>
+                </ResultCollector>
+                <hashTree/>
+              </hashTree>
+              <WhileController guiclass="WhileControllerGui" testclass="WhileController" testname="While查询并校验成员号码，直到通过" enabled="true">
+                <stringProp name="WhileController.condition">${Boolean}</stringProp>
+              </WhileController>
+              <hashTree>
+                <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="查询成员号码(oracle)" enabled="true">
+                  <stringProp name="dataSource">oracleconn</stringProp>
+                  <stringProp name="queryType">Select Statement</stringProp>
+                  <stringProp name="query">select bill_id
+  from (select t.bill_id
+          from so1.ins_user_853 t, so1.ins_user_os_state_853 m
+         where t.user_id = m.user_id
+           and t.state = &apos;1&apos;
+           and t.cust_type = &apos;1&apos;
+           and t.bill_id like &apos;1%&apos;
+           and t.bill_id not in
+               (select o.bill_id from so1.ordx_group_member_info_853 o)
+           and m.os_status =
+               &apos;0000000000000000000000000000000000000000000000000000000000000000&apos;
+           and t.active_date &gt; to_date(&apos;2015-01-01&apos;, &apos;YYYY-MM-DD&apos;)
+         order by dbms_random.value())
+ where rownum &lt; 2</stringProp>
+                  <stringProp name="queryArguments"></stringProp>
+                  <stringProp name="queryArgumentsTypes"></stringProp>
+                  <stringProp name="variableNames"></stringProp>
+                  <stringProp name="resultVariable"></stringProp>
+                </JDBCSampler>
+                <hashTree>
+                  <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="提取查询出的号码" enabled="true">
+                    <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+                    <stringProp name="RegexExtractor.refname">ChildUser</stringProp>
+                    <stringProp name="RegexExtractor.regex">\d+</stringProp>
+                    <stringProp name="RegexExtractor.template">$0$</stringProp>
+                    <stringProp name="RegexExtractor.default">119</stringProp>
+                    <stringProp name="RegexExtractor.match_number">0</stringProp>
+                  </RegexExtractor>
+                  <hashTree/>
+                  <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="察看结果树" enabled="true">
+                    <boolProp name="ResultCollector.error_logging">false</boolProp>
+                    <objProp>
+                      <name>saveConfig</name>
+                      <value class="SampleSaveConfiguration">
+                        <time>true</time>
+                        <latency>true</latency>
+                        <timestamp>true</timestamp>
+                        <success>true</success>
+                        <label>true</label>
+                        <code>true</code>
+                        <message>true</message>
+                        <threadName>true</threadName>
+                        <dataType>true</dataType>
+                        <encoding>false</encoding>
+                        <assertions>true</assertions>
+                        <subresults>true</subresults>
+                        <responseData>false</responseData>
+                        <samplerData>false</samplerData>
+                        <xml>true</xml>
+                        <fieldNames>false</fieldNames>
+                        <responseHeaders>false</responseHeaders>
+                        <requestHeaders>false</requestHeaders>
+                        <responseDataOnError>false</responseDataOnError>
+                        <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+                        <assertionsResultsToSave>0</assertionsResultsToSave>
+                        <bytes>true</bytes>
+                      </value>
+                    </objProp>
+                    <stringProp name="filename"></stringProp>
+                  </ResultCollector>
+                  <hashTree/>
+                </hashTree>
+                <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="校验成员号码(OI_CheckQuery4AddFamilyNetMember)" enabled="true">
+                  <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+                  <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                    <collectionProp name="Arguments.arguments">
+                      <elementProp name="" elementType="HTTPArgument">
+                        <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                        <stringProp name="Argument.value">{&#xd;
+    &quot;PubInfo&quot; : {&#xd;
+        &quot;ClerkId&quot; : &quot;&quot;,&#xd;
+        &quot;ClientIP&quot; : &quot;127.0.0.1&quot;,&#xd;
+        &quot;CountyCode&quot; : &quot;5300&quot;,&#xd;
+        &quot;InterfaceId&quot; : &quot;6000&quot;,&#xd;
+        &quot;InterfaceType&quot; : &quot;49&quot;,&#xd;
+        &quot;OpId&quot; : &quot;95550018&quot;,&#xd;
+        &quot;OrgId&quot; : &quot;0&quot;,&#xd;
+        &quot;RegionCode&quot; : &quot;853&quot;,&#xd;
+        &quot;TransactionId&quot; : &quot;20121210000018&quot;,&#xd;
+        &quot;TransactionTime&quot; : &quot;20121210140824&quot;&#xd;
+    },&#xd;
+    &quot;Request&quot; : {&#xd;
+        &quot;BusiCode&quot; : &quot;OI_CheckQuery4AddFamilyNetMember&quot;,&#xd;
+        &quot;BusiParams&quot; : {&#xd;
+            &quot;BillId&quot; : &quot;${ChildUser}&quot;,&#xd;
+            &quot;FamilyNetType&quot; : &quot;${FamilyNetType}&quot;,&#xd;
+            &quot;MainOfferId&quot; : &quot;${MainOfferId}&quot;,&#xd;
+            &quot;RoleId&quot; : &quot;${RoleId}&quot;&#xd;
+        }&#xd;
+    }&#xd;
+}</stringProp>
+                        <stringProp name="Argument.metadata">=</stringProp>
+                      </elementProp>
+                    </collectionProp>
+                  </elementProp>
+                  <stringProp name="HTTPSampler.domain">${Ip}</stringProp>
+                  <stringProp name="HTTPSampler.port">${Port}</stringProp>
+                  <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                  <stringProp name="HTTPSampler.response_timeout"></stringProp>
+                  <stringProp name="HTTPSampler.protocol"></stringProp>
+                  <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+                  <stringProp name="HTTPSampler.path">/CRMService</stringProp>
+                  <stringProp name="HTTPSampler.method">POST</stringProp>
+                  <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                  <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                  <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                  <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                  <stringProp name="HTTPSampler.implementation">Java</stringProp>
+                  <boolProp name="HTTPSampler.monitor">false</boolProp>
+                  <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+                </HTTPSamplerProxy>
+                <hashTree>
+                  <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="察看结果树" enabled="true">
+                    <boolProp name="ResultCollector.error_logging">false</boolProp>
+                    <objProp>
+                      <name>saveConfig</name>
+                      <value class="SampleSaveConfiguration">
+                        <time>true</time>
+                        <latency>true</latency>
+                        <timestamp>true</timestamp>
+                        <success>true</success>
+                        <label>true</label>
+                        <code>true</code>
+                        <message>true</message>
+                        <threadName>true</threadName>
+                        <dataType>true</dataType>
+                        <encoding>false</encoding>
+                        <assertions>true</assertions>
+                        <subresults>true</subresults>
+                        <responseData>false</responseData>
+                        <samplerData>false</samplerData>
+                        <xml>true</xml>
+                        <fieldNames>false</fieldNames>
+                        <responseHeaders>false</responseHeaders>
+                        <requestHeaders>false</requestHeaders>
+                        <responseDataOnError>false</responseDataOnError>
+                        <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+                        <assertionsResultsToSave>0</assertionsResultsToSave>
+                        <bytes>true</bytes>
+                      </value>
+                    </objProp>
+                    <stringProp name="filename"></stringProp>
+                  </ResultCollector>
+                  <hashTree/>
+                  <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="提取校验结果" enabled="true">
+                    <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+                    <stringProp name="RegexExtractor.refname">result</stringProp>
+                    <stringProp name="RegexExtractor.regex">&quot;CheckResult&quot;:(.)</stringProp>
+                    <stringProp name="RegexExtractor.template">$1$</stringProp>
+                    <stringProp name="RegexExtractor.default">119</stringProp>
+                    <stringProp name="RegexExtractor.match_number">0</stringProp>
+                  </RegexExtractor>
+                  <hashTree/>
+                </hashTree>
+                <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="Debug Sampler" enabled="true">
+                  <boolProp name="displayJMeterProperties">true</boolProp>
+                  <boolProp name="displayJMeterVariables">true</boolProp>
+                  <boolProp name="displaySystemProperties">true</boolProp>
+                </DebugSampler>
+                <hashTree>
+                  <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="察看结果树" enabled="true">
+                    <boolProp name="ResultCollector.error_logging">false</boolProp>
+                    <objProp>
+                      <name>saveConfig</name>
+                      <value class="SampleSaveConfiguration">
+                        <time>true</time>
+                        <latency>true</latency>
+                        <timestamp>true</timestamp>
+                        <success>true</success>
+                        <label>true</label>
+                        <code>true</code>
+                        <message>true</message>
+                        <threadName>true</threadName>
+                        <dataType>true</dataType>
+                        <encoding>false</encoding>
+                        <assertions>true</assertions>
+                        <subresults>true</subresults>
+                        <responseData>false</responseData>
+                        <samplerData>false</samplerData>
+                        <xml>true</xml>
+                        <fieldNames>false</fieldNames>
+                        <responseHeaders>false</responseHeaders>
+                        <requestHeaders>false</requestHeaders>
+                        <responseDataOnError>false</responseDataOnError>
+                        <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+                        <assertionsResultsToSave>0</assertionsResultsToSave>
+                        <bytes>true</bytes>
+                      </value>
+                    </objProp>
+                    <stringProp name="filename"></stringProp>
+                  </ResultCollector>
+                  <hashTree/>
+                </hashTree>
+                <IfController guiclass="IfControllerPanel" testclass="IfController" testname="if(校验通过，设置boolean=False)" enabled="true">
+                  <stringProp name="IfController.condition">&quot;${result}&quot;==&quot;1&quot;</stringProp>
+                  <boolProp name="IfController.evaluateAll">false</boolProp>
+                </IfController>
+                <hashTree>
+                  <UserParameters guiclass="UserParametersGui" testclass="UserParameters" testname="设置boolean=False" enabled="true">
+                    <collectionProp name="UserParameters.names">
+                      <stringProp name="1729365000">Boolean</stringProp>
+                    </collectionProp>
+                    <collectionProp name="UserParameters.thread_values">
+                      <collectionProp name="74520001">
+                        <stringProp name="67643651">False</stringProp>
+                      </collectionProp>
+                    </collectionProp>
+                    <boolProp name="UserParameters.per_iteration">false</boolProp>
+                  </UserParameters>
+                  <hashTree/>
+                  <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="Debug Sampler" enabled="true">
+                    <boolProp name="displayJMeterProperties">true</boolProp>
+                    <boolProp name="displayJMeterVariables">true</boolProp>
+                    <boolProp name="displaySystemProperties">true</boolProp>
+                  </DebugSampler>
+                  <hashTree>
+                    <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="察看结果树" enabled="true">
+                      <boolProp name="ResultCollector.error_logging">false</boolProp>
+                      <objProp>
+                        <name>saveConfig</name>
+                        <value class="SampleSaveConfiguration">
+                          <time>true</time>
+                          <latency>true</latency>
+                          <timestamp>true</timestamp>
+                          <success>true</success>
+                          <label>true</label>
+                          <code>true</code>
+                          <message>true</message>
+                          <threadName>true</threadName>
+                          <dataType>true</dataType>
+                          <encoding>false</encoding>
+                          <assertions>true</assertions>
+                          <subresults>true</subresults>
+                          <responseData>false</responseData>
+                          <samplerData>false</samplerData>
+                          <xml>true</xml>
+                          <fieldNames>false</fieldNames>
+                          <responseHeaders>false</responseHeaders>
+                          <requestHeaders>false</requestHeaders>
+                          <responseDataOnError>false</responseDataOnError>
+                          <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+                          <assertionsResultsToSave>0</assertionsResultsToSave>
+                          <bytes>true</bytes>
+                        </value>
+                      </objProp>
+                      <stringProp name="filename"></stringProp>
+                    </ResultCollector>
+                    <hashTree/>
+                  </hashTree>
+                </hashTree>
+              </hashTree>
+            </hashTree>
+            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="步骤三设置其他参数" enabled="true"/>
+            <hashTree>
+              <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="根据主号码查询虚用户user_id(oracle)" enabled="true">
+                <stringProp name="dataSource">oracleconn</stringProp>
+                <stringProp name="queryType">Select Statement</stringProp>
+                <stringProp name="query">select t.user_id
+  from so1.ins_off_ins_user_853 t
+ where offer_inst_id in
+       (select t.offer_inst_id
+          from so1.ins_off_ins_user_853 t
+         where user_id in (select t.user_id
+                             from so1.ins_user_853 t
+                            where bill_id = &apos;${MainUser}&apos;
+           and offer_id = &apos;216000000086&apos;))
+   and is_main_offer = &apos;1&apos;</stringProp>
+                <stringProp name="queryArguments"></stringProp>
+                <stringProp name="queryArgumentsTypes"></stringProp>
+                <stringProp name="variableNames"></stringProp>
+                <stringProp name="resultVariable"></stringProp>
+              </JDBCSampler>
+              <hashTree>
+                <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="提取查询出的号码" enabled="true">
+                  <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+                  <stringProp name="RegexExtractor.refname">FamilyNetId</stringProp>
+                  <stringProp name="RegexExtractor.regex">\d+</stringProp>
+                  <stringProp name="RegexExtractor.template">$0$</stringProp>
+                  <stringProp name="RegexExtractor.default">119</stringProp>
+                  <stringProp name="RegexExtractor.match_number">0</stringProp>
+                </RegexExtractor>
+                <hashTree/>
+                <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="察看结果树" enabled="true">
+                  <boolProp name="ResultCollector.error_logging">false</boolProp>
+                  <objProp>
+                    <name>saveConfig</name>
+                    <value class="SampleSaveConfiguration">
+                      <time>true</time>
+                      <latency>true</latency>
+                      <timestamp>true</timestamp>
+                      <success>true</success>
+                      <label>true</label>
+                      <code>true</code>
+                      <message>true</message>
+                      <threadName>true</threadName>
+                      <dataType>true</dataType>
+                      <encoding>false</encoding>
+                      <assertions>true</assertions>
+                      <subresults>true</subresults>
+                      <responseData>false</responseData>
+                      <samplerData>false</samplerData>
+                      <xml>true</xml>
+                      <fieldNames>false</fieldNames>
+                      <responseHeaders>false</responseHeaders>
+                      <requestHeaders>false</requestHeaders>
+                      <responseDataOnError>false</responseDataOnError>
+                      <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+                      <assertionsResultsToSave>0</assertionsResultsToSave>
+                      <bytes>true</bytes>
+                    </value>
+                  </objProp>
+                  <stringProp name="filename"></stringProp>
+                </ResultCollector>
+                <hashTree/>
+              </hashTree>
+              <UserParameters guiclass="UserParametersGui" testclass="UserParameters" testname="设置随机短号" enabled="true">
+                <collectionProp name="UserParameters.names">
+                  <stringProp name="-277876342">ShortNum</stringProp>
+                </collectionProp>
+                <collectionProp name="UserParameters.thread_values">
+                  <collectionProp name="-80649708">
+                    <stringProp name="380421572">${__Random(500,599)}</stringProp>
+                  </collectionProp>
+                </collectionProp>
+                <boolProp name="UserParameters.per_iteration">false</boolProp>
+              </UserParameters>
+              <hashTree/>
+            </hashTree>
+            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="步骤四(受理提交)" enabled="true"/>
+            <hashTree>
+              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="受理成员添加(OI_OrderFamilyNetMember)" enabled="true">
+                <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+                <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                  <collectionProp name="Arguments.arguments">
+                    <elementProp name="" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                      <stringProp name="Argument.value">{&#xd;
+    &quot;PubInfo&quot; : {&#xd;
+        &quot;TransactionId&quot; : &quot;CRM4APP20150417164150100&quot;,&#xd;
+        &quot;InterfaceId&quot; : &quot;6000&quot;,&#xd;
+        &quot;InterfaceType&quot; : &quot;2&quot;,&#xd;
+        &quot;OpId&quot; : &quot;95550018&quot;,&#xd;
+        &quot;CountyCode&quot; : &quot;1001&quot;,&#xd;
+        &quot;OrgId&quot; : &quot;53000000&quot;,&#xd;
+        &quot;ClientIP&quot; : null,&#xd;
+        &quot;TransactionTime&quot; : &quot;20150417164150&quot;,&#xd;
+        &quot;RegionCode&quot; : &quot;853&quot;&#xd;
+    },&#xd;
+    &quot;Request&quot; : {&#xd;
+        &quot;BusiCode&quot; : &quot;OI_OrderFamilyNetMember&quot;,&#xd;
+        &quot;BusiParams&quot; : {&#xd;
+            &quot;OperType&quot; : 1,&#xd;
+            &quot;BillId&quot; : &quot;${MainUser}&quot;,&#xd;
+            &quot;FamilyNetId&quot; : &quot;${FamilyNetId}&quot;,&#xd;
+            &quot;MemberInfo&quot; : [&#xd;
+                {&#xd;
+                    &quot;BillId&quot; : &quot;${ChildUser}&quot;,&#xd;
+                    &quot;Display&quot; : 0,&#xd;
+                    &quot;ShortNum&quot; : &quot;${ShortNum}&quot;,&#xd;
+                    &quot;EffectDate&quot; : &quot;&quot;,&#xd;
+                    &quot;ExpireDate&quot; : &quot;&quot;,&#xd;
+                    &quot;RoleId&quot; : 0,&#xd;
+                    &quot;Name&quot; : &quot;testerzl&quot;,&#xd;
+                    &quot;RelaType&quot; : 0,&#xd;
+                    &quot;PayIndex&quot; : &quot;${PayIndex}&quot;,&#xd;
+                    &quot;ProdInfo&quot; : [&#xd;
+                        {&#xd;
+                            &quot;ProdId&quot; : 221080311245,&#xd;
+                            &quot;OperType&quot; : 0&#xd;
+                        },&#xd;
+                        {&#xd;
+                            &quot;ProdId&quot; : 221080301223,&#xd;
+                            &quot;OperType&quot; : 0&#xd;
+                        }&#xd;
+                    ]&#xd;
+                }&#xd;
+            ]&#xd;
+        }&#xd;
+    }&#xd;
+}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                    </elementProp>
+                  </collectionProp>
+                </elementProp>
+                <stringProp name="HTTPSampler.domain">${Ip}</stringProp>
+                <stringProp name="HTTPSampler.port">${Port}</stringProp>
+                <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                <stringProp name="HTTPSampler.response_timeout"></stringProp>
+                <stringProp name="HTTPSampler.protocol"></stringProp>
+                <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+                <stringProp name="HTTPSampler.path">/CRMService</stringProp>
+                <stringProp name="HTTPSampler.method">POST</stringProp>
+                <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                <stringProp name="HTTPSampler.implementation">Java</stringProp>
+                <boolProp name="HTTPSampler.monitor">false</boolProp>
+                <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              </HTTPSamplerProxy>
+              <hashTree>
+                <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="察看结果树" enabled="true">
+                  <boolProp name="ResultCollector.error_logging">false</boolProp>
+                  <objProp>
+                    <name>saveConfig</name>
+                    <value class="SampleSaveConfiguration">
+                      <time>true</time>
+                      <latency>true</latency>
+                      <timestamp>true</timestamp>
+                      <success>true</success>
+                      <label>true</label>
+                      <code>true</code>
+                      <message>true</message>
+                      <threadName>true</threadName>
+                      <dataType>true</dataType>
+                      <encoding>false</encoding>
+                      <assertions>true</assertions>
+                      <subresults>true</subresults>
+                      <responseData>false</responseData>
+                      <samplerData>false</samplerData>
+                      <xml>true</xml>
+                      <fieldNames>false</fieldNames>
+                      <responseHeaders>false</responseHeaders>
+                      <requestHeaders>false</requestHeaders>
+                      <responseDataOnError>false</responseDataOnError>
+                      <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+                      <assertionsResultsToSave>0</assertionsResultsToSave>
+                      <bytes>true</bytes>
+                    </value>
+                  </objProp>
+                  <stringProp name="filename"></stringProp>
+                </ResultCollector>
+                <hashTree/>
+                <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="提取受理结果" enabled="true">
+                  <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+                  <stringProp name="RegexExtractor.refname">results</stringProp>
+                  <stringProp name="RegexExtractor.regex">&quot;Code&quot;:&quot;(\d+)&quot;</stringProp>
+                  <stringProp name="RegexExtractor.template">$1$</stringProp>
+                  <stringProp name="RegexExtractor.default">191</stringProp>
+                  <stringProp name="RegexExtractor.match_number">0</stringProp>
+                </RegexExtractor>
+                <hashTree/>
+              </hashTree>
+              <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="Debug Sampler" enabled="true">
+                <boolProp name="displayJMeterProperties">true</boolProp>
+                <boolProp name="displayJMeterVariables">true</boolProp>
+                <boolProp name="displaySystemProperties">true</boolProp>
+              </DebugSampler>
+              <hashTree>
+                <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="察看结果树" enabled="true">
+                  <boolProp name="ResultCollector.error_logging">false</boolProp>
+                  <objProp>
+                    <name>saveConfig</name>
+                    <value class="SampleSaveConfiguration">
+                      <time>true</time>
+                      <latency>true</latency>
+                      <timestamp>true</timestamp>
+                      <success>true</success>
+                      <label>true</label>
+                      <code>true</code>
+                      <message>true</message>
+                      <threadName>true</threadName>
+                      <dataType>true</dataType>
+                      <encoding>false</encoding>
+                      <assertions>true</assertions>
+                      <subresults>true</subresults>
+                      <responseData>false</responseData>
+                      <samplerData>false</samplerData>
+                      <xml>true</xml>
+                      <fieldNames>false</fieldNames>
+                      <responseHeaders>false</responseHeaders>
+                      <requestHeaders>false</requestHeaders>
+                      <responseDataOnError>false</responseDataOnError>
+                      <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+                      <assertionsResultsToSave>0</assertionsResultsToSave>
+                      <bytes>true</bytes>
+                    </value>
+                  </objProp>
+                  <stringProp name="filename"></stringProp>
+                </ResultCollector>
+                <hashTree/>
+              </hashTree>
+              <IfController guiclass="IfControllerPanel" testclass="IfController" testname="if(受理失败，继续while)" enabled="true">
+                <stringProp name="IfController.condition">&quot;${results}&quot;!=&quot;0000&quot;</stringProp>
+                <boolProp name="IfController.evaluateAll">false</boolProp>
+              </IfController>
+              <hashTree>
+                <UserParameters guiclass="UserParametersGui" testclass="UserParameters" testname="设置boolean=True" enabled="true">
+                  <collectionProp name="UserParameters.names">
+                    <stringProp name="1729365000">Boolean</stringProp>
+                  </collectionProp>
+                  <collectionProp name="UserParameters.thread_values">
+                    <collectionProp name="13222069">
+                      <stringProp name="2615726">True</stringProp>
+                    </collectionProp>
+                  </collectionProp>
+                  <boolProp name="UserParameters.per_iteration">false</boolProp>
+                </UserParameters>
+                <hashTree/>
+                <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="Debug Sampler" enabled="true">
+                  <boolProp name="displayJMeterProperties">true</boolProp>
+                  <boolProp name="displayJMeterVariables">true</boolProp>
+                  <boolProp name="displaySystemProperties">true</boolProp>
+                </DebugSampler>
+                <hashTree>
+                  <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="察看结果树" enabled="true">
+                    <boolProp name="ResultCollector.error_logging">false</boolProp>
+                    <objProp>
+                      <name>saveConfig</name>
+                      <value class="SampleSaveConfiguration">
+                        <time>true</time>
+                        <latency>true</latency>
+                        <timestamp>true</timestamp>
+                        <success>true</success>
+                        <label>true</label>
+                        <code>true</code>
+                        <message>true</message>
+                        <threadName>true</threadName>
+                        <dataType>true</dataType>
+                        <encoding>false</encoding>
+                        <assertions>true</assertions>
+                        <subresults>true</subresults>
+                        <responseData>false</responseData>
+                        <samplerData>false</samplerData>
+                        <xml>true</xml>
+                        <fieldNames>false</fieldNames>
+                        <responseHeaders>false</responseHeaders>
+                        <requestHeaders>false</requestHeaders>
+                        <responseDataOnError>false</responseDataOnError>
+                        <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+                        <assertionsResultsToSave>0</assertionsResultsToSave>
+                        <bytes>true</bytes>
+                      </value>
+                    </objProp>
+                    <stringProp name="filename"></stringProp>
+                  </ResultCollector>
+                  <hashTree/>
+                </hashTree>
+              </hashTree>
+            </hashTree>
+          </hashTree>
+        </hashTree>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="业务规则校验" enabled="true"/>
+        <hashTree>
+          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="家庭网添加成员业务校验(OI_CheckQuery4AddFamilyNetMember)" enabled="true"/>
+          <hashTree>
+            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="不能添加停机用户为成员" enabled="true"/>
+            <hashTree>
+              <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="查询停机号码(oracle)" enabled="true">
+                <stringProp name="dataSource">oracleconn</stringProp>
+                <stringProp name="queryType">Select Statement</stringProp>
+                <stringProp name="query">select bill_id
+  from (
+  select t.bill_id
+          from so1.ins_user_853 t, so1.ins_user_os_state_853 m
+         where t.user_id = m.user_id
+           and t.state = &apos;1&apos;
+           and t.cust_type = &apos;1&apos;
+           and t.bill_id like &apos;1%&apos;
+           and t.bill_id not in
+               (select o.bill_id from so1.ordx_group_member_info_853 o)
+           and m.os_status &lt;&gt;
+               &apos;0000000000000000000000000000000000000000000000000000000000000000&apos;
+           and t.active_date &gt; to_date(&apos;2013-06-01&apos;,&apos;YYYY-MM-DD&apos;)
+         order by dbms_random.value()  )
+ where rownum  &lt;2</stringProp>
+                <stringProp name="queryArguments"></stringProp>
+                <stringProp name="queryArgumentsTypes"></stringProp>
+                <stringProp name="variableNames"></stringProp>
+                <stringProp name="resultVariable"></stringProp>
+              </JDBCSampler>
+              <hashTree>
+                <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="提取查询出的号码" enabled="true">
+                  <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+                  <stringProp name="RegexExtractor.refname">bill_id</stringProp>
+                  <stringProp name="RegexExtractor.regex">\d+</stringProp>
+                  <stringProp name="RegexExtractor.template">$0$</stringProp>
+                  <stringProp name="RegexExtractor.default">119</stringProp>
+                  <stringProp name="RegexExtractor.match_number">0</stringProp>
+                </RegexExtractor>
+                <hashTree/>
+                <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="察看结果树" enabled="true">
+                  <boolProp name="ResultCollector.error_logging">false</boolProp>
+                  <objProp>
+                    <name>saveConfig</name>
+                    <value class="SampleSaveConfiguration">
+                      <time>true</time>
+                      <latency>true</latency>
+                      <timestamp>true</timestamp>
+                      <success>true</success>
+                      <label>true</label>
+                      <code>true</code>
+                      <message>true</message>
+                      <threadName>true</threadName>
+                      <dataType>true</dataType>
+                      <encoding>false</encoding>
+                      <assertions>true</assertions>
+                      <subresults>true</subresults>
+                      <responseData>false</responseData>
+                      <samplerData>false</samplerData>
+                      <xml>true</xml>
+                      <fieldNames>false</fieldNames>
+                      <responseHeaders>false</responseHeaders>
+                      <requestHeaders>false</requestHeaders>
+                      <responseDataOnError>false</responseDataOnError>
+                      <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+                      <assertionsResultsToSave>0</assertionsResultsToSave>
+                      <bytes>true</bytes>
+                    </value>
+                  </objProp>
+                  <stringProp name="filename"></stringProp>
+                </ResultCollector>
+                <hashTree/>
+              </hashTree>
+              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="校验" enabled="true">
+                <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+                <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                  <collectionProp name="Arguments.arguments">
+                    <elementProp name="" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                      <stringProp name="Argument.value">{&#xd;
+    &quot;PubInfo&quot; : {&#xd;
+        &quot;ClerkId&quot; : &quot;&quot;,&#xd;
+        &quot;ClientIP&quot; : &quot;127.0.0.1&quot;,&#xd;
+        &quot;CountyCode&quot; : &quot;5300&quot;,&#xd;
+        &quot;InterfaceId&quot; : &quot;6000&quot;,&#xd;
+        &quot;InterfaceType&quot; : &quot;49&quot;,&#xd;
+        &quot;OpId&quot; : &quot;95550018&quot;,&#xd;
+        &quot;OrgId&quot; : &quot;0&quot;,&#xd;
+        &quot;RegionCode&quot; : &quot;853&quot;,&#xd;
+        &quot;TransactionId&quot; : &quot;20121210000018&quot;,&#xd;
+        &quot;TransactionTime&quot; : &quot;20121210140824&quot;&#xd;
+    },&#xd;
+    &quot;Request&quot; : {&#xd;
+        &quot;BusiCode&quot; : &quot;OI_CheckQuery4AddFamilyNetMember&quot;,&#xd;
+        &quot;BusiParams&quot; : {&#xd;
+            &quot;BillId&quot; : &quot;${bill_id}&quot;,&#xd;
+            &quot;FamilyNetType&quot; : &quot;${FamilyNetType}&quot;,&#xd;
+            &quot;MainOfferId&quot; : &quot;${MainOfferId}&quot;,&#xd;
+            &quot;RoleId&quot; : &quot;${RoleId}&quot;&#xd;
+        }&#xd;
+    }&#xd;
+}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                    </elementProp>
+                  </collectionProp>
+                </elementProp>
+                <stringProp name="HTTPSampler.domain">${Ip}</stringProp>
+                <stringProp name="HTTPSampler.port">${Port}</stringProp>
+                <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                <stringProp name="HTTPSampler.response_timeout"></stringProp>
+                <stringProp name="HTTPSampler.protocol"></stringProp>
+                <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+                <stringProp name="HTTPSampler.path">/CRMService</stringProp>
+                <stringProp name="HTTPSampler.method">POST</stringProp>
+                <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                <stringProp name="HTTPSampler.implementation">Java</stringProp>
+                <boolProp name="HTTPSampler.monitor">false</boolProp>
+                <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              </HTTPSamplerProxy>
+              <hashTree>
+                <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+                  <collectionProp name="Asserion.test_strings">
+                    <stringProp name="-1359009934">用户停开机状态</stringProp>
+                  </collectionProp>
+                  <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                  <boolProp name="Assertion.assume_success">false</boolProp>
+                  <intProp name="Assertion.test_type">2</intProp>
+                </ResponseAssertion>
+                <hashTree/>
+                <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="断言结果(没有值代表通过)" enabled="true">
+                  <boolProp name="ResultCollector.error_logging">false</boolProp>
+                  <objProp>
+                    <name>saveConfig</name>
+                    <value class="SampleSaveConfiguration">
+                      <time>true</time>
+                      <latency>true</latency>
+                      <timestamp>true</timestamp>
+                      <success>true</success>
+                      <label>true</label>
+                      <code>true</code>
+                      <message>true</message>
+                      <threadName>true</threadName>
+                      <dataType>true</dataType>
+                      <encoding>false</encoding>
+                      <assertions>true</assertions>
+                      <subresults>true</subresults>
+                      <responseData>false</responseData>
+                      <samplerData>false</samplerData>
+                      <xml>true</xml>
+                      <fieldNames>false</fieldNames>
+                      <responseHeaders>false</responseHeaders>
+                      <requestHeaders>false</requestHeaders>
+                      <responseDataOnError>false</responseDataOnError>
+                      <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+                      <assertionsResultsToSave>0</assertionsResultsToSave>
+                      <bytes>true</bytes>
+                    </value>
+                  </objProp>
+                  <stringProp name="filename"></stringProp>
+                </ResultCollector>
+                <hashTree/>
+              </hashTree>
+            </hashTree>
+            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="不能添加有在途工单的用户为成员" enabled="true"/>
+            <hashTree>
+              <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="查询有在途工单的号码(oracle)" enabled="true">
+                <stringProp name="dataSource">oracleconn</stringProp>
+                <stringProp name="queryType">Select Statement</stringProp>
+                <stringProp name="query">select bill_id
+  from (select t.bill_id
+          from so1.ins_user_853 t, so1.ins_user_os_state_853 m
+         where t.user_id = m.user_id
+           and t.state = &apos;1&apos;
+           and t.cust_type = &apos;1&apos;
+           and t.bill_id like &apos;1%&apos;
+           and m.os_status =
+               &apos;0000000000000000000000000000000000000000000000000000000000000000&apos;    
+           and t.bill_id in (select t.bill_id from so1.ordx_group_member_info_853 t)
+         order by dbms_random.value())
+ where rownum  &lt;2</stringProp>
+                <stringProp name="queryArguments"></stringProp>
+                <stringProp name="queryArgumentsTypes"></stringProp>
+                <stringProp name="variableNames"></stringProp>
+                <stringProp name="resultVariable"></stringProp>
+              </JDBCSampler>
+              <hashTree>
+                <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="提取查询出的号码" enabled="true">
+                  <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+                  <stringProp name="RegexExtractor.refname">bill_id</stringProp>
+                  <stringProp name="RegexExtractor.regex">\d+</stringProp>
+                  <stringProp name="RegexExtractor.template">$0$</stringProp>
+                  <stringProp name="RegexExtractor.default">119</stringProp>
+                  <stringProp name="RegexExtractor.match_number">0</stringProp>
+                </RegexExtractor>
+                <hashTree/>
+                <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="察看结果树" enabled="true">
+                  <boolProp name="ResultCollector.error_logging">false</boolProp>
+                  <objProp>
+                    <name>saveConfig</name>
+                    <value class="SampleSaveConfiguration">
+                      <time>true</time>
+                      <latency>true</latency>
+                      <timestamp>true</timestamp>
+                      <success>true</success>
+                      <label>true</label>
+                      <code>true</code>
+                      <message>true</message>
+                      <threadName>true</threadName>
+                      <dataType>true</dataType>
+                      <encoding>false</encoding>
+                      <assertions>true</assertions>
+                      <subresults>true</subresults>
+                      <responseData>false</responseData>
+                      <samplerData>false</samplerData>
+                      <xml>true</xml>
+                      <fieldNames>false</fieldNames>
+                      <responseHeaders>false</responseHeaders>
+                      <requestHeaders>false</requestHeaders>
+                      <responseDataOnError>false</responseDataOnError>
+                      <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+                      <assertionsResultsToSave>0</assertionsResultsToSave>
+                      <bytes>true</bytes>
+                    </value>
+                  </objProp>
+                  <stringProp name="filename"></stringProp>
+                </ResultCollector>
+                <hashTree/>
+              </hashTree>
+              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="校验" enabled="true">
+                <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+                <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                  <collectionProp name="Arguments.arguments">
+                    <elementProp name="" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                      <stringProp name="Argument.value">{&#xd;
+    &quot;PubInfo&quot; : {&#xd;
+        &quot;ClerkId&quot; : &quot;&quot;,&#xd;
+        &quot;ClientIP&quot; : &quot;127.0.0.1&quot;,&#xd;
+        &quot;CountyCode&quot; : &quot;5300&quot;,&#xd;
+        &quot;InterfaceId&quot; : &quot;6000&quot;,&#xd;
+        &quot;InterfaceType&quot; : &quot;49&quot;,&#xd;
+        &quot;OpId&quot; : &quot;95550018&quot;,&#xd;
+        &quot;OrgId&quot; : &quot;0&quot;,&#xd;
+        &quot;RegionCode&quot; : &quot;853&quot;,&#xd;
+        &quot;TransactionId&quot; : &quot;20121210000018&quot;,&#xd;
+        &quot;TransactionTime&quot; : &quot;20121210140824&quot;&#xd;
+    },&#xd;
+    &quot;Request&quot; : {&#xd;
+        &quot;BusiCode&quot; : &quot;OI_CheckQuery4AddFamilyNetMember&quot;,&#xd;
+        &quot;BusiParams&quot; : {&#xd;
+            &quot;BillId&quot; : &quot;${bill_id}&quot;,&#xd;
+            &quot;FamilyNetType&quot; : &quot;${FamilyNetType}&quot;,&#xd;
+            &quot;MainOfferId&quot; : &quot;${MainOfferId}&quot;,&#xd;
+            &quot;RoleId&quot; : &quot;${RoleId}&quot;&#xd;
+        }&#xd;
+    }&#xd;
+}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                    </elementProp>
+                  </collectionProp>
+                </elementProp>
+                <stringProp name="HTTPSampler.domain">${Ip}</stringProp>
+                <stringProp name="HTTPSampler.port">${Port}</stringProp>
+                <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                <stringProp name="HTTPSampler.response_timeout"></stringProp>
+                <stringProp name="HTTPSampler.protocol"></stringProp>
+                <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+                <stringProp name="HTTPSampler.path">/CRMService</stringProp>
+                <stringProp name="HTTPSampler.method">POST</stringProp>
+                <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                <stringProp name="HTTPSampler.implementation">Java</stringProp>
+                <boolProp name="HTTPSampler.monitor">false</boolProp>
+                <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              </HTTPSamplerProxy>
+              <hashTree>
+                <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+                  <collectionProp name="Asserion.test_strings">
+                    <stringProp name="-418190081">未竣工订单</stringProp>
+                  </collectionProp>
+                  <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                  <boolProp name="Assertion.assume_success">false</boolProp>
+                  <intProp name="Assertion.test_type">2</intProp>
+                </ResponseAssertion>
+                <hashTree/>
+                <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="断言结果(没有值代表通过)" enabled="true">
+                  <boolProp name="ResultCollector.error_logging">false</boolProp>
+                  <objProp>
+                    <name>saveConfig</name>
+                    <value class="SampleSaveConfiguration">
+                      <time>true</time>
+                      <latency>true</latency>
+                      <timestamp>true</timestamp>
+                      <success>true</success>
+                      <label>true</label>
+                      <code>true</code>
+                      <message>true</message>
+                      <threadName>true</threadName>
+                      <dataType>true</dataType>
+                      <encoding>false</encoding>
+                      <assertions>true</assertions>
+                      <subresults>true</subresults>
+                      <responseData>false</responseData>
+                      <samplerData>false</samplerData>
+                      <xml>true</xml>
+                      <fieldNames>false</fieldNames>
+                      <responseHeaders>false</responseHeaders>
+                      <requestHeaders>false</requestHeaders>
+                      <responseDataOnError>false</responseDataOnError>
+                      <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+                      <assertionsResultsToSave>0</assertionsResultsToSave>
+                      <bytes>true</bytes>
+                    </value>
+                  </objProp>
+                  <stringProp name="filename"></stringProp>
+                </ResultCollector>
+                <hashTree/>
+              </hashTree>
+            </hashTree>
+            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="不能添加不存在的用户为成员" enabled="true"/>
+            <hashTree>
+              <UserParameters guiclass="UserParametersGui" testclass="UserParameters" testname="设置不存在的号码" enabled="true">
+                <collectionProp name="UserParameters.names">
+                  <stringProp name="-109839277">bill_id</stringProp>
+                </collectionProp>
+                <collectionProp name="UserParameters.thread_values">
+                  <collectionProp name="1673493268">
+                    <stringProp name="2073454213">13570837885</stringProp>
+                  </collectionProp>
+                </collectionProp>
+                <boolProp name="UserParameters.per_iteration">false</boolProp>
+              </UserParameters>
+              <hashTree/>
+              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="校验" enabled="true">
+                <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+                <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                  <collectionProp name="Arguments.arguments">
+                    <elementProp name="" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                      <stringProp name="Argument.value">{&#xd;
+    &quot;PubInfo&quot; : {&#xd;
+        &quot;ClerkId&quot; : &quot;&quot;,&#xd;
+        &quot;ClientIP&quot; : &quot;127.0.0.1&quot;,&#xd;
+        &quot;CountyCode&quot; : &quot;5300&quot;,&#xd;
+        &quot;InterfaceId&quot; : &quot;6000&quot;,&#xd;
+        &quot;InterfaceType&quot; : &quot;49&quot;,&#xd;
+        &quot;OpId&quot; : &quot;95550018&quot;,&#xd;
+        &quot;OrgId&quot; : &quot;0&quot;,&#xd;
+        &quot;RegionCode&quot; : &quot;853&quot;,&#xd;
+        &quot;TransactionId&quot; : &quot;20121210000018&quot;,&#xd;
+        &quot;TransactionTime&quot; : &quot;20121210140824&quot;&#xd;
+    },&#xd;
+    &quot;Request&quot; : {&#xd;
+        &quot;BusiCode&quot; : &quot;OI_CheckQuery4AddFamilyNetMember&quot;,&#xd;
+        &quot;BusiParams&quot; : {&#xd;
+            &quot;BillId&quot; : &quot;${bill_id}&quot;,&#xd;
+            &quot;FamilyNetType&quot; : &quot;${FamilyNetType}&quot;,&#xd;
+            &quot;MainOfferId&quot; : &quot;${MainOfferId}&quot;,&#xd;
+            &quot;RoleId&quot; : &quot;${RoleId}&quot;&#xd;
+        }&#xd;
+    }&#xd;
+}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                    </elementProp>
+                  </collectionProp>
+                </elementProp>
+                <stringProp name="HTTPSampler.domain">${Ip}</stringProp>
+                <stringProp name="HTTPSampler.port">${Port}</stringProp>
+                <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                <stringProp name="HTTPSampler.response_timeout"></stringProp>
+                <stringProp name="HTTPSampler.protocol"></stringProp>
+                <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+                <stringProp name="HTTPSampler.path">/CRMService</stringProp>
+                <stringProp name="HTTPSampler.method">POST</stringProp>
+                <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                <stringProp name="HTTPSampler.implementation">Java</stringProp>
+                <boolProp name="HTTPSampler.monitor">false</boolProp>
+                <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              </HTTPSamplerProxy>
+              <hashTree>
+                <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+                  <collectionProp name="Asserion.test_strings">
+                    <stringProp name="616564582">无法获得对应的地市</stringProp>
+                  </collectionProp>
+                  <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                  <boolProp name="Assertion.assume_success">false</boolProp>
+                  <intProp name="Assertion.test_type">2</intProp>
+                </ResponseAssertion>
+                <hashTree/>
+                <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="断言结果(没有值代表通过)" enabled="true">
+                  <boolProp name="ResultCollector.error_logging">false</boolProp>
+                  <objProp>
+                    <name>saveConfig</name>
+                    <value class="SampleSaveConfiguration">
+                      <time>true</time>
+                      <latency>true</latency>
+                      <timestamp>true</timestamp>
+                      <success>true</success>
+                      <label>true</label>
+                      <code>true</code>
+                      <message>true</message>
+                      <threadName>true</threadName>
+                      <dataType>true</dataType>
+                      <encoding>false</encoding>
+                      <assertions>true</assertions>
+                      <subresults>true</subresults>
+                      <responseData>false</responseData>
+                      <samplerData>false</samplerData>
+                      <xml>true</xml>
+                      <fieldNames>false</fieldNames>
+                      <responseHeaders>false</responseHeaders>
+                      <requestHeaders>false</requestHeaders>
+                      <responseDataOnError>false</responseDataOnError>
+                      <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+                      <assertionsResultsToSave>0</assertionsResultsToSave>
+                      <bytes>true</bytes>
+                    </value>
+                  </objProp>
+                  <stringProp name="filename"></stringProp>
+                </ResultCollector>
+                <hashTree/>
+              </hashTree>
+            </hashTree>
+          </hashTree>
+          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="家庭网成员变更业务校验(OI_CheckQuery4ModFamilyNetMember)" enabled="true"/>
+          <hashTree>
+            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="停机用户不能受理" enabled="true"/>
+            <hashTree>
+              <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="查询停机号码(oracle)" enabled="true">
+                <stringProp name="dataSource">oracleconn</stringProp>
+                <stringProp name="queryType">Select Statement</stringProp>
+                <stringProp name="query">select bill_id
+  from (
+  select t.bill_id
+          from so1.ins_user_853 t, so1.ins_user_os_state_853 m
+         where t.user_id = m.user_id
+           and t.state = &apos;1&apos;
+           and t.cust_type = &apos;1&apos;
+           and t.bill_id like &apos;1%&apos;
+           and t.bill_id not in
+               (select o.bill_id from so1.ordx_group_member_info_853 o)
+           and m.os_status &lt;&gt;
+               &apos;0000000000000000000000000000000000000000000000000000000000000000&apos;
+           and t.active_date &gt; to_date(&apos;2013-06-01&apos;,&apos;YYYY-MM-DD&apos;)
+         order by dbms_random.value()  )
+ where rownum  &lt;2</stringProp>
+                <stringProp name="queryArguments"></stringProp>
+                <stringProp name="queryArgumentsTypes"></stringProp>
+                <stringProp name="variableNames"></stringProp>
+                <stringProp name="resultVariable"></stringProp>
+              </JDBCSampler>
+              <hashTree>
+                <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="提取查询出的号码" enabled="true">
+                  <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+                  <stringProp name="RegexExtractor.refname">bill_id</stringProp>
+                  <stringProp name="RegexExtractor.regex">\d+</stringProp>
+                  <stringProp name="RegexExtractor.template">$0$</stringProp>
+                  <stringProp name="RegexExtractor.default">119</stringProp>
+                  <stringProp name="RegexExtractor.match_number">0</stringProp>
+                </RegexExtractor>
+                <hashTree/>
+                <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="察看结果树" enabled="true">
+                  <boolProp name="ResultCollector.error_logging">false</boolProp>
+                  <objProp>
+                    <name>saveConfig</name>
+                    <value class="SampleSaveConfiguration">
+                      <time>true</time>
+                      <latency>true</latency>
+                      <timestamp>true</timestamp>
+                      <success>true</success>
+                      <label>true</label>
+                      <code>true</code>
+                      <message>true</message>
+                      <threadName>true</threadName>
+                      <dataType>true</dataType>
+                      <encoding>false</encoding>
+                      <assertions>true</assertions>
+                      <subresults>true</subresults>
+                      <responseData>false</responseData>
+                      <samplerData>false</samplerData>
+                      <xml>true</xml>
+                      <fieldNames>false</fieldNames>
+                      <responseHeaders>false</responseHeaders>
+                      <requestHeaders>false</requestHeaders>
+                      <responseDataOnError>false</responseDataOnError>
+                      <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+                      <assertionsResultsToSave>0</assertionsResultsToSave>
+                      <bytes>true</bytes>
+                    </value>
+                  </objProp>
+                  <stringProp name="filename"></stringProp>
+                </ResultCollector>
+                <hashTree/>
+              </hashTree>
+              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="校验" enabled="true">
+                <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+                <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                  <collectionProp name="Arguments.arguments">
+                    <elementProp name="" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                      <stringProp name="Argument.value">{&#xd;
+	&quot;PubInfo&quot;:{&#xd;
+        &quot;ClerkId&quot; : &quot;&quot;,&#xd;
+        &quot;ClientIP&quot; : &quot;127.0.0.1&quot;,&#xd;
+        &quot;CountyCode&quot; : &quot;5300&quot;,&#xd;
+        &quot;InterfaceId&quot; : &quot;6000&quot;,&#xd;
+        &quot;InterfaceType&quot; : &quot;49&quot;,&#xd;
+        &quot;OpId&quot; : &quot;95550018&quot;,&#xd;
+        &quot;OrgId&quot; : &quot;0&quot;,&#xd;
+        &quot;RegionCode&quot; : &quot;853&quot;,&#xd;
+        &quot;TransactionId&quot; : &quot;20121210000018&quot;,&#xd;
+        &quot;TransactionTime&quot; : &quot;20121210140824&quot;&#xd;
+	},&#xd;
+	&quot;Request&quot;:{&#xd;
+		&quot;BusiCode&quot;:&quot;OI_CheckQuery4ModFamilyNetMember&quot;,&#xd;
+		&quot;BusiParams&quot;:{&#xd;
+			&quot;BillId&quot;:&quot;${bill_id}&quot;,&#xd;
+			&quot;FamilyNetType&quot;:&quot;${FamilyNetType}&quot;&#xd;
+		}&#xd;
+	}&#xd;
+}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                    </elementProp>
+                  </collectionProp>
+                </elementProp>
+                <stringProp name="HTTPSampler.domain">${Ip}</stringProp>
+                <stringProp name="HTTPSampler.port">${Port}</stringProp>
+                <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                <stringProp name="HTTPSampler.response_timeout"></stringProp>
+                <stringProp name="HTTPSampler.protocol"></stringProp>
+                <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+                <stringProp name="HTTPSampler.path">/CRMService</stringProp>
+                <stringProp name="HTTPSampler.method">POST</stringProp>
+                <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                <stringProp name="HTTPSampler.implementation">Java</stringProp>
+                <boolProp name="HTTPSampler.monitor">false</boolProp>
+                <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              </HTTPSamplerProxy>
+              <hashTree>
+                <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+                  <collectionProp name="Asserion.test_strings">
+                    <stringProp name="-1359009934">用户停开机状态</stringProp>
+                  </collectionProp>
+                  <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                  <boolProp name="Assertion.assume_success">false</boolProp>
+                  <intProp name="Assertion.test_type">2</intProp>
+                </ResponseAssertion>
+                <hashTree/>
+                <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="断言结果(没有值代表通过)" enabled="true">
+                  <boolProp name="ResultCollector.error_logging">false</boolProp>
+                  <objProp>
+                    <name>saveConfig</name>
+                    <value class="SampleSaveConfiguration">
+                      <time>true</time>
+                      <latency>true</latency>
+                      <timestamp>true</timestamp>
+                      <success>true</success>
+                      <label>true</label>
+                      <code>true</code>
+                      <message>true</message>
+                      <threadName>true</threadName>
+                      <dataType>true</dataType>
+                      <encoding>false</encoding>
+                      <assertions>true</assertions>
+                      <subresults>true</subresults>
+                      <responseData>false</responseData>
+                      <samplerData>false</samplerData>
+                      <xml>true</xml>
+                      <fieldNames>false</fieldNames>
+                      <responseHeaders>false</responseHeaders>
+                      <requestHeaders>false</requestHeaders>
+                      <responseDataOnError>false</responseDataOnError>
+                      <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+                      <assertionsResultsToSave>0</assertionsResultsToSave>
+                      <bytes>true</bytes>
+                    </value>
+                  </objProp>
+                  <stringProp name="filename"></stringProp>
+                </ResultCollector>
+                <hashTree/>
+              </hashTree>
+            </hashTree>
+            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="非主号码不能受理" enabled="true"/>
+            <hashTree>
+              <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="查询非群组主号码(oracle)" enabled="true">
+                <stringProp name="dataSource">oracleconn</stringProp>
+                <stringProp name="queryType">Select Statement</stringProp>
+                <stringProp name="query">select bill_id
+   from (select t.bill_id
+           from so1.ins_user_853 t
+          where user_id not in
+                (select t.user_id
+                   from so1.ins_off_ins_user_853 t
+                  where offer_id in
+                        (select t.offer_id
+                           from product.up_offer t
+                          where t.offer_type = &apos;${OfferType}&apos;))
+            and state = &apos;1&apos;
+            and bill_id like &apos;1%&apos;
+            and t.effective_date&gt; to_date(&apos;2014-01-01&apos;,&apos;YYYY-MM-DD&apos;)
+          order by dbms_random.value())
+  where rownum &lt;2</stringProp>
+                <stringProp name="queryArguments"></stringProp>
+                <stringProp name="queryArgumentsTypes"></stringProp>
+                <stringProp name="variableNames"></stringProp>
+                <stringProp name="resultVariable"></stringProp>
+              </JDBCSampler>
+              <hashTree>
+                <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="提取查询出的号码" enabled="true">
+                  <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+                  <stringProp name="RegexExtractor.refname">bill_id</stringProp>
+                  <stringProp name="RegexExtractor.regex">\d+</stringProp>
+                  <stringProp name="RegexExtractor.template">$0$</stringProp>
+                  <stringProp name="RegexExtractor.default">119</stringProp>
+                  <stringProp name="RegexExtractor.match_number">0</stringProp>
+                </RegexExtractor>
+                <hashTree/>
+                <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="察看结果树" enabled="true">
+                  <boolProp name="ResultCollector.error_logging">false</boolProp>
+                  <objProp>
+                    <name>saveConfig</name>
+                    <value class="SampleSaveConfiguration">
+                      <time>true</time>
+                      <latency>true</latency>
+                      <timestamp>true</timestamp>
+                      <success>true</success>
+                      <label>true</label>
+                      <code>true</code>
+                      <message>true</message>
+                      <threadName>true</threadName>
+                      <dataType>true</dataType>
+                      <encoding>false</encoding>
+                      <assertions>true</assertions>
+                      <subresults>true</subresults>
+                      <responseData>false</responseData>
+                      <samplerData>false</samplerData>
+                      <xml>true</xml>
+                      <fieldNames>false</fieldNames>
+                      <responseHeaders>false</responseHeaders>
+                      <requestHeaders>false</requestHeaders>
+                      <responseDataOnError>false</responseDataOnError>
+                      <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+                      <assertionsResultsToSave>0</assertionsResultsToSave>
+                      <bytes>true</bytes>
+                    </value>
+                  </objProp>
+                  <stringProp name="filename"></stringProp>
+                </ResultCollector>
+                <hashTree/>
+              </hashTree>
+              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="校验" enabled="true">
+                <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+                <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                  <collectionProp name="Arguments.arguments">
+                    <elementProp name="" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                      <stringProp name="Argument.value">{&#xd;
+	&quot;PubInfo&quot;:{&#xd;
+        &quot;ClerkId&quot; : &quot;&quot;,&#xd;
+        &quot;ClientIP&quot; : &quot;127.0.0.1&quot;,&#xd;
+        &quot;CountyCode&quot; : &quot;5300&quot;,&#xd;
+        &quot;InterfaceId&quot; : &quot;6000&quot;,&#xd;
+        &quot;InterfaceType&quot; : &quot;49&quot;,&#xd;
+        &quot;OpId&quot; : &quot;95550018&quot;,&#xd;
+        &quot;OrgId&quot; : &quot;0&quot;,&#xd;
+        &quot;RegionCode&quot; : &quot;853&quot;,&#xd;
+        &quot;TransactionId&quot; : &quot;20121210000018&quot;,&#xd;
+        &quot;TransactionTime&quot; : &quot;20121210140824&quot;&#xd;
+	},&#xd;
+	&quot;Request&quot;:{&#xd;
+		&quot;BusiCode&quot;:&quot;OI_CheckQuery4ModFamilyNetMember&quot;,&#xd;
+		&quot;BusiParams&quot;:{&#xd;
+			&quot;BillId&quot;:&quot;${bill_id}&quot;,&#xd;
+			&quot;FamilyNetType&quot;:&quot;${FamilyNetType}&quot;&#xd;
+		}&#xd;
+	}&#xd;
+}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                    </elementProp>
+                  </collectionProp>
+                </elementProp>
+                <stringProp name="HTTPSampler.domain">${Ip}</stringProp>
+                <stringProp name="HTTPSampler.port">${Port}</stringProp>
+                <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                <stringProp name="HTTPSampler.response_timeout"></stringProp>
+                <stringProp name="HTTPSampler.protocol"></stringProp>
+                <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+                <stringProp name="HTTPSampler.path">/CRMService</stringProp>
+                <stringProp name="HTTPSampler.method">POST</stringProp>
+                <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                <stringProp name="HTTPSampler.implementation">Java</stringProp>
+                <boolProp name="HTTPSampler.monitor">false</boolProp>
+                <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              </HTTPSamplerProxy>
+              <hashTree>
+                <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+                  <collectionProp name="Asserion.test_strings">
+                    <stringProp name="-2015308454">该号码未受理家庭套餐</stringProp>
+                  </collectionProp>
+                  <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                  <boolProp name="Assertion.assume_success">false</boolProp>
+                  <intProp name="Assertion.test_type">2</intProp>
+                </ResponseAssertion>
+                <hashTree/>
+                <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="断言结果(没有值代表通过)" enabled="true">
+                  <boolProp name="ResultCollector.error_logging">false</boolProp>
+                  <objProp>
+                    <name>saveConfig</name>
+                    <value class="SampleSaveConfiguration">
+                      <time>true</time>
+                      <latency>true</latency>
+                      <timestamp>true</timestamp>
+                      <success>true</success>
+                      <label>true</label>
+                      <code>true</code>
+                      <message>true</message>
+                      <threadName>true</threadName>
+                      <dataType>true</dataType>
+                      <encoding>false</encoding>
+                      <assertions>true</assertions>
+                      <subresults>true</subresults>
+                      <responseData>false</responseData>
+                      <samplerData>false</samplerData>
+                      <xml>true</xml>
+                      <fieldNames>false</fieldNames>
+                      <responseHeaders>false</responseHeaders>
+                      <requestHeaders>false</requestHeaders>
+                      <responseDataOnError>false</responseDataOnError>
+                      <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+                      <assertionsResultsToSave>0</assertionsResultsToSave>
+                      <bytes>true</bytes>
+                    </value>
+                  </objProp>
+                  <stringProp name="filename"></stringProp>
+                </ResultCollector>
+                <hashTree/>
+              </hashTree>
+            </hashTree>
+            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="号码不存在不能受理" enabled="true"/>
+            <hashTree>
+              <UserParameters guiclass="UserParametersGui" testclass="UserParameters" testname="设置不存在的号码" enabled="true">
+                <collectionProp name="UserParameters.names">
+                  <stringProp name="-109839277">bill_id</stringProp>
+                </collectionProp>
+                <collectionProp name="UserParameters.thread_values">
+                  <collectionProp name="1673493268">
+                    <stringProp name="2073454213">13570837885</stringProp>
+                  </collectionProp>
+                </collectionProp>
+                <boolProp name="UserParameters.per_iteration">false</boolProp>
+              </UserParameters>
+              <hashTree/>
+              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="校验" enabled="true">
+                <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+                <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                  <collectionProp name="Arguments.arguments">
+                    <elementProp name="" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                      <stringProp name="Argument.value">{&#xd;
+	&quot;PubInfo&quot;:{&#xd;
+        &quot;ClerkId&quot; : &quot;&quot;,&#xd;
+        &quot;ClientIP&quot; : &quot;127.0.0.1&quot;,&#xd;
+        &quot;CountyCode&quot; : &quot;5300&quot;,&#xd;
+        &quot;InterfaceId&quot; : &quot;6000&quot;,&#xd;
+        &quot;InterfaceType&quot; : &quot;49&quot;,&#xd;
+        &quot;OpId&quot; : &quot;95550018&quot;,&#xd;
+        &quot;OrgId&quot; : &quot;0&quot;,&#xd;
+        &quot;RegionCode&quot; : &quot;853&quot;,&#xd;
+        &quot;TransactionId&quot; : &quot;20121210000018&quot;,&#xd;
+        &quot;TransactionTime&quot; : &quot;20121210140824&quot;&#xd;
+	},&#xd;
+	&quot;Request&quot;:{&#xd;
+		&quot;BusiCode&quot;:&quot;OI_CheckQuery4ModFamilyNetMember&quot;,&#xd;
+		&quot;BusiParams&quot;:{&#xd;
+			&quot;BillId&quot;:&quot;${bill_id}&quot;,&#xd;
+			&quot;FamilyNetType&quot;:&quot;${FamilyNetType}&quot;&#xd;
+		}&#xd;
+	}&#xd;
+}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                    </elementProp>
+                  </collectionProp>
+                </elementProp>
+                <stringProp name="HTTPSampler.domain">${Ip}</stringProp>
+                <stringProp name="HTTPSampler.port">${Port}</stringProp>
+                <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                <stringProp name="HTTPSampler.response_timeout"></stringProp>
+                <stringProp name="HTTPSampler.protocol"></stringProp>
+                <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+                <stringProp name="HTTPSampler.path">/CRMService</stringProp>
+                <stringProp name="HTTPSampler.method">POST</stringProp>
+                <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                <stringProp name="HTTPSampler.implementation">Java</stringProp>
+                <boolProp name="HTTPSampler.monitor">false</boolProp>
+                <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              </HTTPSamplerProxy>
+              <hashTree>
+                <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+                  <collectionProp name="Asserion.test_strings">
+                    <stringProp name="616564582">无法获得对应的地市</stringProp>
+                  </collectionProp>
+                  <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                  <boolProp name="Assertion.assume_success">false</boolProp>
+                  <intProp name="Assertion.test_type">2</intProp>
+                </ResponseAssertion>
+                <hashTree/>
+                <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="断言结果(没有值代表通过)" enabled="true">
+                  <boolProp name="ResultCollector.error_logging">false</boolProp>
+                  <objProp>
+                    <name>saveConfig</name>
+                    <value class="SampleSaveConfiguration">
+                      <time>true</time>
+                      <latency>true</latency>
+                      <timestamp>true</timestamp>
+                      <success>true</success>
+                      <label>true</label>
+                      <code>true</code>
+                      <message>true</message>
+                      <threadName>true</threadName>
+                      <dataType>true</dataType>
+                      <encoding>false</encoding>
+                      <assertions>true</assertions>
+                      <subresults>true</subresults>
+                      <responseData>false</responseData>
+                      <samplerData>false</samplerData>
+                      <xml>true</xml>
+                      <fieldNames>false</fieldNames>
+                      <responseHeaders>false</responseHeaders>
+                      <requestHeaders>false</requestHeaders>
+                      <responseDataOnError>false</responseDataOnError>
+                      <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+                      <assertionsResultsToSave>0</assertionsResultsToSave>
+                      <bytes>true</bytes>
+                    </value>
+                  </objProp>
+                  <stringProp name="filename"></stringProp>
+                </ResultCollector>
+                <hashTree/>
+              </hashTree>
+            </hashTree>
+          </hashTree>
+        </hashTree>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>

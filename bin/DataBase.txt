@@ -1,0 +1,5 @@
+database=${jdbc:oracle:thin:@10.3.3.194:1521:gxngcrm}
+user=${base}
+password=${base#123}
+paramsql=${select b.param_code, b.param_name, b.is_null,a.interface_id from SIP.BS_BUSI_ACCESS a left join SIP.BS_BUSI_ACCESS_PARAM b on a.busi_access_id = b.busi_access_id where  b.param_type = 0 and a.state='U' and b.state='U' and b.param_code is not null and a.busi_access_code='$OIname$'}
+interfacesql=${select a.interface_id,a.busi_access_name from SIP.BS_BUSI_ACCESS a where a.state='U' and a.busi_access_code='$OIname$'}
